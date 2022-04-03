@@ -1,0 +1,40 @@
+\documentclass[12pt, a4paper]{article}
+\addtolength{\oddsidemargin}{-.875in}
+\addtolength{\evensidemargin}{-.875in}
+\addtolength{\textwidth}{1.75in}
+\addtolength{\topmargin}{-.875in}
+\addtolength{\textheight}{1.75in}
+
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+
+\begin{document}
+\noindent
+Nicholas Garrett\\ \\
+Professor Beard\\ \\
+CS 4412\\ \\
+10/21/2021\\ \\
+
+
+\begin{center}
+	\centering{	Project 6\\ }
+\end{center}
+
+\noindent
+2.b\\
+My depth-first search method is still unfinished.  It took much longer than expected to finish bug fixing for my breadth-first search. \\ \\
+
+2.c\\
+Theoretically, assuming it is found, the Big-O for this algorithm should be \( n \), as there are 1/3 n nodes to follow with each n iteration to find the path, which forces the worst-case situation to iterate through all n).\\ \\
+
+3. c\\
+ The shortest path my algorithm found was 4 terms long: 1, 2, 7, 8. \\ \\
+
+3. d\\
+I think the big-O of this algorithm would be(O(n), as the worst scenario would be to have to iterate through each node, finding the target node at the last one, assuming it is found.  \\ \\
+
+5.b \\
+I think the big-O for thus algorithm would be around \(n^3\), as the algorithm iterates through all the terms in the row, at most n, then iterates through all their children, at most n, and then may return and re-iterate thorugh them all again.
+\end{document}  

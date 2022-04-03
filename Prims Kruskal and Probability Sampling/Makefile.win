@@ -1,0 +1,40 @@
+# Project: minimumSpanningTree
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o PrimsAlgorithm.o logging.o PrimsAlgorithmV2.o ProbabilityMethod.o
+LINKOBJ  = main.o PrimsAlgorithm.o logging.o PrimsAlgorithmV2.o ProbabilityMethod.o
+LIBS     = -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib" -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
+BIN      = minimumSpanningTree.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+DEL      = C:\Program Files (x86)\Embarcadero\Dev-Cpp\devcpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+PrimsAlgorithm.o: PrimsAlgorithm.cpp
+	$(CPP) -c PrimsAlgorithm.cpp -o PrimsAlgorithm.o $(CXXFLAGS)
+
+logging.o: logging.cpp
+	$(CPP) -c logging.cpp -o logging.o $(CXXFLAGS)
+
+PrimsAlgorithmV2.o: PrimsAlgorithmV2.cpp
+	$(CPP) -c PrimsAlgorithmV2.cpp -o PrimsAlgorithmV2.o $(CXXFLAGS)
+
+ProbabilityMethod.o: ProbabilityMethod.cpp
+	$(CPP) -c ProbabilityMethod.cpp -o ProbabilityMethod.o $(CXXFLAGS)

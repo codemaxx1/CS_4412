@@ -1,0 +1,48 @@
+\documentclass[12pt, a4paper]{article}
+\addtolength{\oddsidemargin}{-.875in}
+\addtolength{\evensidemargin}{-.875in}
+\addtolength{\textwidth}{1.75in}
+\addtolength{\topmargin}{-.875in}
+\addtolength{\textheight}{1.75in}
+
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+
+\begin{document}
+\noindent
+Nicholas Garrett\\ \\
+Professor Beard\\ \\
+CS 4412\\ \\
+12/5/2021\\ \\
+
+
+\begin{center}
+	\centering{	Prims, and Kruskal, and Probability Sampling\\ }
+\end{center}
+
+
+2\\
+a.\\
+My algorithm uses very simple data systems for storing information.  
+FIrst, the inputted (read) matrix is used as an input into the algorithm.  This matrix is then copied into a local matrix to implement recundancy.
+Then, the algorithm runs through each of the points, following the path containing the smallest weight for each node.  The system ensures that nodes are not copied or duplicated by holding all nodes inside of another storage matrix representing what nodes have been inserted into the min spanning tree. \\ \\ \\
+
+c.\\
+	Time your algorithm in a compelling manner and report the results. 5 points. \\ \\ \\
+
+d.\\
+	I believe that my algorithm runs in \(O(n^3)\) time, as the highest order loop operates as a loop nested in a loop, inside of a for loop.\\ \\ \\
+
+
+4\\
+a.\\
+	This algorithm operates by using the depth-1 search function from the part 2 of this assignment and adds all the depth-1 nodes into an array.  By randomly selecting a node from that array, and runnning this function repeatedly, the criteria for the instructions is met. \\ \\ \\
+
+c.\\
+	Time your algorithm in a compelling manner and report the results. 5 points. \\ \\ \\
+
+d.\\
+	I belive the big-O for this algorithm would be \(O(n^2)\), as the most time-complex operation is the depth-1 search, which runs in \(O(n^2)\)
+\end{document}  
